@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calcula consumo</title>
+</head>
+
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+function calcula(km,coche){
+	var consumo= (km/100)*coche;
+	console.log("el consumo es de: "+consumo);
+	var pinta = "<p>El consumo para "+km+" Km. es de "+consumo+" litros de combustible si se hace una media de "+coche+ " litro a los 100Km.";
+	$("#resultados").append(pinta);
+}
+
+function recibeDatos(){
+	var km=$("#km").val();
+	var coche=$("#coche").val();
+	calcula(km,coche);
+}
+</script>
+<div id="datos">
+<p>Kilómetros a recorrer</p>
+<input type="number" id="km">
+<p>Consumo Medio</p>
+<input type="number" id="coche">
+<p>
+<button id="boton" onclick="recibeDatos()">Calcular</button>
+</p>
+</div>
+<div id="resultados">
+
+</div>
+</body>
+</html>

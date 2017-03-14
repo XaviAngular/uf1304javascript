@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ES_es">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+	var a;
+	var b;	
+	a = 5;
+	b = 7;	
+	console.log("La suma es: "+(a+b));
+	var cadena1="Hola";
+	var cadena2="Manuel";
+	var mensaje=cadena1+" "+cadena2+" como estas?";
+	console.warn(mensaje);
+	console.error(mensaje);
+	//Saber si es par o impar un número
+	var num1=36;
+	var resto=num1%2;
+	console.log("El resto es: "+resto);
+
+if (resto===0) {
+	console.log("el número es par");
+} 
+else {
+	console.log("el número es impar");
+}
+
+function parImpar(){
+	var number=$('#numero').val();
+	if ((number!="")&&(number>0)){ 
+	var resto=number%2;
+	if (resto===0) {
+		var info="El número "+number+" es par";
+		$('#resultado').text(info);
+		$('#numero').val("");
+		pintaResultado(info);
+	}
+	else {
+		var info="El número "+number+" es impar";
+		$('#resultado').text(info);
+		$('#numero').val("");
+		pintaResultado(info);
+	}
+	}//fin primer if
+	else {
+		$('#resultado').text("Hay un problema con la introducción de datos, por favor verifique que ha introducido un número");
+		$('#numero').val("");
+	}
+}
+
+function pintaResultado(result){
+	var info="<p>"+result+"</p>";
+	$('#container').append(info);
+}
+
+</script>
+</head>
+<body>
+	<input name="numero" id="numero" type="number">
+	<button onclick="parImpar()" id="comprobar">Test</button>
+	<span id="resultado"></span>
+	<div id="container">
+		
+	</div>
+</body>
+</html>
