@@ -11,7 +11,7 @@
 function calcula(km,coche){
 	var consumo= (km/100)*coche;
 	console.log("el consumo es de: "+consumo);
-	var pinta = "<p>El consumo para "+km+" Km. es de "+consumo+" litros de combustible si se hace una media de "+coche+ " litro a los 100Km.";
+	var pinta = "<p>El consumo para "+km+" Km. es de "+consumo+" litros de combustible si se hace una media de "+coche+ " litro a los 100Km.</p>";
 	$("#resultados").append(pinta);
 }
 
@@ -20,6 +20,7 @@ function recibeDatos(){
 	var coche=$("#coche").val();
 	calcula(km,coche);
 }
+
 </script>
 <div id="datos">
 <p>Kilómetros a recorrer</p>
