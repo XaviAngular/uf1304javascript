@@ -25,6 +25,25 @@
           </span>
         </div>
       </div>
+      <div class="col s12">
+        <div class="card-panel teal">
+          <h3>Modificar elementos de un objeto</h3>
+          <span class="white-text flow-text">
+          Para modificar un valor de un objeto, basta con igualarlo al nuevo valor. Siguiendo el ejemplo anterior, para modificar la edad del trabajador1 a 40 sería:<br>
+          trabajador1.edad=40;
+
+          </span>
+          <h3>Recorrer Objeto con jQuery</h3>
+          <span class="white-text flow-text">
+          Para recorrer y mostrar cada uno de los nombre de campo o etiquetas con sus valores, uno de los método que mejor funcionaria sería el $.each de jQuery. Ejemplo:<br>
+    $.each(trabajador1, function(k,v){
+          console.log(k);
+          console.log(v);
+          }); 
+            
+          </span>
+        </div>
+      </div>
     </div>
         
 
@@ -32,6 +51,17 @@
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+     <script>
+     //Así es como se define un objeto
+       var trabajador1={nombre:'Manuel',edad:30,departamento:'contabilidad', email:'manuel@empresa.com'};
+    //Así se accede a un alemento del objeto. Se muestra por consola el email del trabajador
+       console.log(trabajador1.email);
+    //recorrer un objeto y mostrar por consola cada campo/etiqueta y valor.
+     $.each(trabajador1, function(k,v){
+          console.log(k);
+          console.log(v);
+          }); 
+     </script>
     </body>
   </html>
         
