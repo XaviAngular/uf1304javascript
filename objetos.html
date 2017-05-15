@@ -44,6 +44,39 @@
           </span>
         </div>
       </div>
+      <div class="col s12">
+        <div class="card-panel teal">
+          <h3>Modificar elementos de un objeto</h3>
+          <span class="white-text flow-text">
+          Para modificar un valor de un objeto, basta con igualarlo al nuevo valor. Siguiendo el ejemplo anterior, para modificar la edad del trabajador1 a 40 sería:<br>
+          trabajador1.edad=40;
+
+          </span>
+          <h3>Arrays y Objetos</h3>
+          <span class="white-text flow-text">
+          Para almacenar multiples objetos en una sola variable se usan los arrays, por ejemplo, para almacenar tres trabajadores en una sola variable seria:
+          var trabajadores=[
+           {nombre:'Manuel',edad:30,departamento:'contabilidad', email:'manuel@empresa.com'},
+           {nombre:'Ana',edad:35,departamento:'ventas', email:'ana@empresa.com'},
+           {nombre:'Alfonso',edad:50,departamento:'compras', email:'alfonso@empresa.com'} 
+          ];
+            
+          </span>
+          <h3>Recorrer Array de Objetos</h3>
+          <span class="white-text flow-text">Para recorrer todos los elementos de un array, principalmente existen dos formas, la forma JavaScript y la forma jQuery. Lo siguientes ejemplos muestran por consola los emails de los trabajadores<br>
+          <h5>Forma 1-Con JavaScript:</h5><br>
+          <pre>
+  for (i in trabajadores) {
+    console.log(trabajadores[i].email);}</pre>
+  <h5>Forma 2-jQuery:</h5>
+  <pre>
+  $.each(trabajadores, function(k,v){
+      console.log(v.email);
+  })</pre><br></span>
+
+        </div>
+      </div>
+
     </div>
         
 
@@ -60,7 +93,13 @@
      $.each(trabajador1, function(k,v){
           console.log(k);
           console.log(v);
-          }); 
+          });
+     var trabajadores=[
+           {nombre:'Manuel',edad:30,departamento:'contabilidad', email:'manuel@empresa.com'},
+           {nombre:'Ana',edad:35,departamento:'ventas', email:'ana@empresa.com'},
+           {nombre:'Alfonso',edad:50,departamento:'compras', email:'alfonso@empresa.com'} 
+          ];
+      console.log(trabajadores);
      </script>
     </body>
   </html>
